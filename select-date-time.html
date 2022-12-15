@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diflexmo | Schedule Appointment</title>
+    <title>Diflexmo | Select Date and Time</title>
     <link rel="stylesheet" href="./style/style.css">
 </head>
 
@@ -23,9 +23,10 @@
                 <div class="menu">
                     <div class="text-primary display-4"><a href="./index.html">Home</a></div>
                     <div>
-                        <a href="#"><button class="secondary-button"><img src="./img/add-user.svg" width="16.67px" height="15px">
-                            Register</button></a>
-                        </div>
+                        <a href="#"><button class="secondary-button"><img src="./img/add-user.svg" width="16.67px"
+                                    height="15px">
+                                Register</button></a>
+                    </div>
                     <div><span class="text-gray text-bold">NL|</span> <span class="text-primary text-bold">EN</span>
                     </div>
                 </div>
@@ -49,29 +50,45 @@
     </div>
     <!-- ==========================||Navbar with Banner text and Images Ends Here||===================== -->
 
-    <div class="container">
-       <div class="small-container">
-        <div class="schedule-appointment-main-content mt-16">
-            <div>
-                <span class="text-primary display-5">Hello User!</span>
+    <!-- =============================||Main Content Starts=============================|| -->
+    <div class="small-container">
+        <div class="basic-details mt-32">
+            <!-- ================================|| Progress Bar Starts ||=====================-->
+            <div class="basic-details-progress-bar">
+                <div>
+                    <button class="progress-button bg-success text-white">Basic Details</button>
+                </div>
+                <div>
+                    <hr class="progress-bar-hr bg-success">
+                </div>
+                <div>
+                    <button class="progress-button bg-success text-white">Select Exam</button>
+                </div>
+                <div>
+                    <hr class="progress-bar-hr bg-success">
+                </div>
+                <div>
+                    <button class="progress-button bg-primary text-white">Select Date & Time</button>
+                </div>
+                <div>
+                    <hr class="progress-bar-hr">
+                </div>
+                <div>
+                    <button class="progress-button">Confirm</button>
+                </div>
             </div>
-            <div>
-                <span class="display-5">Already have an account? <a href="./signin.html"><span class="display-4 text-primary">Login</span></a></span>
+            <!-- ================================|| Progress Bar Ends ||=====================-->
+
+
+            <div class="basic-details-form-group bg-white mt-64">
+                <span>Loading...</span>
             </div>
-            <div class="mt-16">
-                <img src="./img/online_calendar.png" alt="calendar-image" width="300px" height="auto">
-            </div>
-            <div class="mt-16">
-                <a href="./basic-details.html"><button class="primary-button"> Schedule Appointment</button></a>
-            </div>
-            <div>
-                <span class="display-3">Click above to schedule an appointment</span>
-            </div>
+            <a href="./confirm.html"><button class="primary-button mt-16">Next</button></a>
+
         </div>
-       </div>
     </div>
     <footer>
-        <div class="footer-text bg-gray mt-64">
+        <div class="footer-text mt-64">
             <span class="text-primary display-4">Powered by Diflexmo Scheduling System</span>
         </div>
     </footer>

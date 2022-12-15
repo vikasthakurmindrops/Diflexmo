@@ -19,10 +19,12 @@ body {
     --white: #FFFFFF;
     --black: #000000;
     --gray: #4B5565;
+    --lite-gray:#E3E8EF;
     --lite-pink: #FEE4E2;
     --border-radius: 8px;
     --card-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     --transition: .2s all ease;
+    --success: #039855;
 
 }
 
@@ -70,6 +72,20 @@ body {
     line-height: 24px;
     transition: var(--transition);
 }
+.gray-button {
+    background-color: var(--gray);
+    padding: 10px 15px 10px 15px;
+    border-radius: var(--border-radius);
+    border: none;
+    color: var(--white);
+    font-weight: 400;
+    /* cursor: pointer; */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    transition: var(--transition);
+}
 
 .white-button {
     background-color: var(--white);
@@ -79,6 +95,17 @@ body {
     cursor: pointer;
     border: none;
     transition: var(--transition);
+}
+
+.progress-button {
+    background-color: var(--white);
+    padding: 10px 15px 10px 15px;
+    border-radius: var(--border-radius);
+    color: var(--primary);
+    border: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
 }
 
 .white-button:hover {
@@ -96,8 +123,16 @@ body {
 .bg-white {
     background-color: var(--white);
 }
-.bg-gray{
+
+.bg-gray {
     background-color: var(--gray);
+}
+.bg-lite-gray{
+    background-color: var(--lite-gray);
+}
+
+.bg-success {
+    background-color: var(--success);
 }
 
 .display-1 {
@@ -142,6 +177,10 @@ body {
     line-height: 20px;
 }
 
+.hoverable {
+    cursor: pointer;
+}
+
 .text-bold {
     font-weight: 500;
 }
@@ -181,20 +220,24 @@ body {
 .mt-32 {
     margin-top: 32px;
 }
-.mt-64{
+
+.mt-64 {
     margin-top: 64px;
 }
-.float-left{
+
+.float-left {
     text-align: start;
 }
-.float-right{
+
+.float-right {
     text-align: end;
 }
 
 .d-flex {
     display: flex;
 }
-.flex-column{
+
+.flex-column {
     display: flex;
     flex-direction: column;
 }
@@ -209,7 +252,8 @@ body {
     width: 90%;
     margin: auto;
 }
-.small-container{
+
+.small-container {
     width: 80%;
     margin: auto;
 }
@@ -230,7 +274,8 @@ body {
     align-items: center;
     gap: 15px;
 }
-.navbar .menu a{
+
+.navbar .menu a {
     text-decoration: none;
     color: var(--primary);
 }
@@ -334,6 +379,7 @@ footer .footer-content .footer-content-items {
 .sign-in-right-container {
     width: 50%;
 }
+
 /* =============================||Sign in Left Container starts here||====================== */
 .sign-in-left-container {
     border-right: 1px solid #CDD5DF;
@@ -344,6 +390,7 @@ footer .footer-content .footer-content-items {
     justify-content: center;
     align-items: center;
 }
+
 /* =============================||Sign in Left Container Ends here||====================== */
 
 /* =============================||Sign in Right Container starts here||====================== */
@@ -389,39 +436,50 @@ footer .footer-content .footer-content-items {
     margin-top: 5px;
 }
 
-.sign-in-right-container form input[type=text], input[type=password], input[type=tel] {
+.sign-in-right-container form input[type=text],
+input[type=password],
+input[type=tel] {
     border: none;
     margin-left: 3px;
     padding: 5px;
     font-weight: 500;
 }
-.sign-in-right-container form input[type=text], input[type=password], input[type=tel]:focus{
+
+.sign-in-right-container form input[type=text],
+input[type=password],
+input[type=tel]:focus {
     outline: none;
 }
+
 /* =============================||Sign in Right Container Ends here||====================== */
-footer .footer-text{
+footer .footer-text {
     display: flex;
     justify-content: end;
     padding: 10px;
 }
+
 /* ==========================================Sign In page Ends=================================== */
 
 /* ========================================||Login-Schedule Page Starts||==================================== */
 
-.small-container .header-container{
+.small-container .header-container {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.small-container .header-container .container-left, .container-right{
-    width:50%;
+
+.small-container .header-container .container-left,
+.container-right {
+    width: 50%;
 }
-.container-right .container-right-img{
+
+.container-right .container-right-img {
     display: flex;
     justify-content: center;
 }
-.dashboard-container{
+
+.dashboard-container {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -429,20 +487,23 @@ footer .footer-text{
     gap: 50px;
     margin-bottom: 100px;
 }
-.dashboard-container .sidebar-menu{
+
+.dashboard-container .sidebar-menu {
     width: 20%;
     max-height: 250px;
     border: 1px solid black;
     border-radius: var(--border-radius);
     box-shadow: var(--card-box-shadow);
 }
-.dashboard-container .sidebar-menu .sidebar-menu-items{
+
+.dashboard-container .sidebar-menu .sidebar-menu-items {
     padding: 15px;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.dashboard-container .sidebar-menu .menu-item{
+
+.dashboard-container .sidebar-menu .menu-item {
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -451,26 +512,30 @@ footer .footer-text{
     color: var(--secondary);
     padding: 10px;
 }
-.dashboard-container .sidebar-menu .menu-item:hover{
+
+.dashboard-container .sidebar-menu .menu-item:hover {
     /* background-color: var(--secondary); */
     border-radius: var(--border-radius);
     color: var(--primary);
     cursor: pointer;
     border: 1px solid var(--secondary);
 }
+
 /* .dashboard-container .sidebar-menu .menu-item:hover .menu-item img{
     background-color: var(--primary);
 } */
-.dashboard-container .sidebar-menu .menu-item img{
+.dashboard-container .sidebar-menu .menu-item img {
     min-width: 10px;
     width: 15px;
 }
-.dashboard-container .login-dashboard-content{
+
+.dashboard-container .login-dashboard-content {
     width: 80%;
     border-radius: var(--border-radius);
     box-shadow: var(--card-box-shadow);
 }
-.dashboard-container .login-dashboard-content .dashboard-main-content{
+
+.dashboard-container .login-dashboard-content .dashboard-main-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -478,19 +543,23 @@ footer .footer-text{
     gap: 10px;
     margin-bottom: 20px;
 }
-.active-menu{
+
+.active-menu {
     background-color: var(--secondary);
     border-radius: var(--border-radius);
-    color: var(--primary)!important;
+    color: var(--primary) !important;
     cursor: pointer;
     padding: 10px;
     border: none;
-}/* ========================================||Login-Schedule Page Ends||==================================== */
+}
+
+/* ========================================||Login-Schedule Page Ends||==================================== */
 /* ===========================================||Schedule Page Starts||========================= */
-.dashboard-container .dashboard-main-content{
+.dashboard-container .dashboard-main-content {
     width: 100%;
 }
-.schedule-appointment-main-content{
+
+.schedule-appointment-main-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -500,40 +569,156 @@ footer .footer-text{
     gap: 15px;
     padding: 20px;
 }
-.schedule-appointment-main-content a{
+
+.schedule-appointment-main-content a {
     text-decoration: underline;
     color: var(--primary);
 }
+
 /* ===========================================||Schedule Page Ends||========================= */
 
 /* ===========================================||Basic Details Page Starts||========================= */
-.basic-details{
+.basic-details {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 25px 10px;
 }
-.basic-details .basic-details-form-group{
+
+.basic-details-progress-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.basic-details-progress-bar .progress-bar-hr {
+    width: 30px;
+    height: 4px;
+}
+
+.basic-details .basic-details-form-group {
     box-shadow: var(--card-box-shadow);
     border-radius: var(--border-radius);
-    padding: 20px 10px;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
-.basic-details .basic-details-form-group .form-group{
+
+.basic-details .basic-details-form-group .form-group {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
-.basic-details .basic-details-form-group .form-align{
+
+.basic-details .basic-details-form-group .form-align {
     display: flex;
     flex-direction: row;
     gap: 25px;
     align-items: center;
 }
-.basic-details .basic-details-form-group form input[type=text], input[type=password], input[type=tel], input[type=email] {
+
+.basic-details form input[type=text],
+input[type=password],
+input[type=tel],
+input[type=email] {
     border: none;
     margin-left: 3px;
-    padding: 5px;
+    padding: 10px;
     font-weight: 500;
     border-radius: var(--border-radius);
-    /* border: 1px solid var(--gray); */
+    border: 1px solid var(--secondary);
 }
+
+.basic-details form input[type=text],
+input[type=password],
+input[type=tel],
+input[type=email]:focus {
+    outline: none;
+}
+
+/* ===========================================||Basic Details Page Ends||========================= */
+/* ===========================================||Select Exam Starts||========================= */
+.basic-details-form-group select,
+textarea {
+    border: none;
+    resize: none;
+    border: 1px solid var(--gray);
+    border-radius: var(--border-radius);
+    padding: 10px;
+}
+
+.basic-details-form-group select,
+textarea:focus {
+    outline: none;
+}
+
+.basic-details-form-group .add-more-exam {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===========================================||Select Exam Ends||========================= */
+/* ===========================================||Confirm Page Starts||========================= */
+.confirm-details{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+   
+}
+.confirm-details hr{
+    height: 2px;
+    border: none;
+}
+.confirm-details .patient-details{
+    width: 40%;
+    box-shadow: var(--card-box-shadow);
+    border-radius: var(--border-radius);
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.confirm-details .appointment-details{
+    width: 60%;
+    box-shadow: var(--card-box-shadow);
+    border-radius: var(--border-radius);
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.confirm-details .patient-details .patient-details-text-section{
+display: flex;
+gap: 100px;
+flex-direction: row;
+}
+.confirm-details .appointment-date-time{
+display: flex;
+flex-direction: row;
+justify-content: start;
+align-items: center;
+gap: 8px;
+}
+.confirm-details .appointment-instruction{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+.declaration{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.declaration .declaration-buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+/* ===========================================||Confirm Page Ends||========================= */

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diflexmo | Basic Details</title>
+    <title>Diflexmo | Select Exam</title>
     <link rel="stylesheet" href="./style/style.css">
 </head>
 
@@ -56,11 +56,11 @@
             <!-- ================================|| Progress Bar Starts ||=====================-->
             <div class="basic-details-progress-bar">
                 <div>
-                    <button class="progress-button bg-primary text-white">Basic Details</button>
+                    <button class="progress-button bg-success text-white">Basic Details</button>
                 </div>
-                <div><hr class="progress-bar-hr"></div>
+                <div><hr class="progress-bar-hr bg-success"></div>
                 <div>
-                    <button class="progress-button">Select Exam</button>
+                    <button class="progress-button bg-primary text-white">Select Exam</button>
                 </div>
                 <div><hr class="progress-bar-hr"></div>
                 <div>
@@ -77,26 +77,42 @@
             <div class="basic-details-form-group bg-white mt-64">
                 <form class="form-align">
                     <div class="form-group">
-                        <label for="first-name">First Name*</label>
-                        <input type="text" placeholder="Johan">
-                    </div>
-                    <div class="form-group">
-                        <label for="first-name">Last Name*</label>
-                        <input type="text" placeholder="Green">
+                        <label for="first-name">Referring Physician*</label>
+                        <input type="text" placeholder="Enter Physician Name">
                     </div>
                 </form>
                 <form class="form-align">
                     <div class="form-group">
-                        <label for="first-name">Email*</label>
-                        <input type="email" placeholder="Email">
+                        <div><span class="text-primary display-5">Select Exam(s) below</span></div>
+                        <label for="first-name">Exam*</label>
+                            <select name="exams" id="exams">
+                              <option value="Aanpesing stuenzolen">Aanpesing stuenzolen</option>
+                              <option value="Levering stuenzolen">Levering stuenzolen</option>
+                              <option value="Matname">Matname</option>
+                              <option value="Dangue">Dangue</option>
+                              <option value="Aanpesing stuenzolen">Aanpesing stuenzolen</option>
+                              <option value="Levering stuenzolen">Levering stuenzolen</option>
+                              <option value="Matname">Matname</option>
+                              <option value="Dangue">Dangue</option>
+                            </select>
                     </div>
                     <div class="form-group">
-                        <label for="first-name">Phone*</label>
-                        <input type="tel" placeholder="Phone">
+                        <div class="mt-16"></div>
+                        <label for="first-name">Remarks</label>
+                        <textarea name="remarks" id="" cols="30" rows="2" placeholder="Enter remarks"></textarea>
+                    </div>
+                    <div class="mt-32">
+                        <img src="./img/delete-Icon.svg" alt="delete-icon" class="hoverable">
                     </div>
                 </form>
+                <div class="add-more-exam">
+                    <div>
+                        <img src="./img/plus-icon.svg" alt="plus-icon" width="25px">
+                    </div>
+                    <div><span class="display-5 text-primary"> Click to add more exam</span></div>
+                </div>
             </div>
-            <a href="./select-exam.html"><button class="primary-button mt-16">Next</button></a>
+            <a href="./select-date-time.html"><button class="primary-button mt-16">Next</button></a>
              <!-- ================================|| Form Section Ends||=====================-->
         </div>
     </div>
