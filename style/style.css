@@ -21,10 +21,12 @@ body {
     --gray: #4B5565;
     --lite-gray:#E3E8EF;
     --lite-pink: #FEE4E2;
+    --pink:#FDA29B;
     --border-radius: 8px;
     --card-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     --transition: .2s all ease;
     --success: #039855;
+    --warning:#FDB022;
 
 }
 
@@ -134,7 +136,12 @@ body {
 .bg-success {
     background-color: var(--success);
 }
-
+.bg-warning{
+    background-color: var(--warning);
+}
+.bg-pink{
+    background-color: var(--pink);
+}
 .display-1 {
     font-family: 'Montserrat';
     font-style: normal;
@@ -722,3 +729,16 @@ gap: 8px;
     gap: 15px;
 }
 /* ===========================================||Confirm Page Ends||========================= */
+/* ===========================================||Lab Confirmation Page Starts||========================= */
+.lab-confirmation-status{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.lab-confirmation-status .pending-status{
+    padding: 10px 15px 10px 15px;
+    color: var(--white);
+    border-radius: var(--border-radius);
+}

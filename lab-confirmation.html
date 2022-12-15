@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diflexmo | Confirm</title>
+    <title>Diflexmo | Lab Confirmation</title>
     <link rel="stylesheet" href="./style/style.css">
 </head>
 
@@ -52,8 +52,8 @@
 
     <!-- =============================||Main Content Starts=============================|| -->
     <div class="small-container">
+        <!-- ================================|| Progress Bar Starts ||=====================-->
         <div class="basic-details mt-32">
-            <!-- ================================|| Progress Bar Starts ||=====================-->
             <div class="basic-details-progress-bar">
                 <div>
                     <button class="progress-button bg-success text-white">Basic Details</button>
@@ -74,11 +74,19 @@
                     <hr class="progress-bar-hr bg-success">
                 </div>
                 <div>
-                    <button class="progress-button bg-primary text-white">Confirm</button>
+                    <button class="progress-button bg-success text-white">Confirm</button>
                 </div>
             </div>
-            <!-- ================================|| Progress Bar Ends ||=====================-->
         </div>
+        <div class="lab-confirmation-status">
+            <div class="bg-warning pending-status">
+                <span class="display-4">Confirmation from lab: pending</span>
+            </div>
+            <div>
+                <span class="display-5 text-primary">We will notify you by email once your appointment will be confirmed.</span>
+            </div>
+        </div>
+        <!-- ================================|| Progress Bar Ends ||=====================-->
         <div class="confirm-details mt-64">
             <div class="patient-details display-4 ">
                 <span class="text-primary">Patient Details</span>
@@ -108,17 +116,15 @@
                 </div>
                 <div class="display-5 appointment-instruction">
                     <span>Instructions:</span>
-                    <span>Have an empty stomach 10 hours prior to the test (Levering stuenzolen)<br> Do not consume alcohal 24 hours prior to the test(Maatname)</span>
+                    <span>Have an empty stomach 10 hours prior to the test (Levering stuenzolen)<br> Do not consume
+                        alcohal 24 hours prior to the test(Maatname)</span>
                 </div>
             </div>
         </div>
         <div class="declaration mt-32">
-            <div class="display-5">
-            <input type="checkbox"> I have an application from my referring GP, doctor specialist or dentist.*
-            </div>
             <div class="declaration-buttons mt-32">
-                <a href="./select-date-time.html"><button class="secondary-button">Back</button></a>
-                <a href="./lab-confirmation.html"><button type="button"  class="primary-button">Confirm</button></a>
+                <a href="./select-date-time.html"><button class="secondary-button">Edit appointment</button></a>
+                <a href="./cancel-appointment.html"><button type="button" disabled class="primary-button">Cancel appointment</button></a>
             </div>
         </div>
         <footer>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diflexmo | Login Schedule Appointment</title>
+    <title>Diflexmo | Login Select-Date-Time</title>
     <link rel="stylesheet" href="./style/style.css">
 </head>
 
@@ -68,15 +68,29 @@
                 </div>
             </div>
             <div class="login-dashboard-content">
-                <div class="dashboard-main-content mt-16">
-                    <div><span class="display-4 text-primary">Hello Johan!</span></div>
-                    <div>
-                        <img src="./img/online_calendar_new.png" alt="calendar-image" width="300px" height="auto">
+                <div class="basic-details mt-32">
+                    <!-- ================================|| Progress Bar Starts ||=====================-->
+                    <div class="basic-details-progress-bar">
+                        <div>
+                            <button class="progress-button bg-success text-white">Select Exam</button>
+                        </div>
+                        <div><hr class="progress-bar-hr"></div>
+                        <div>
+                            <button class="progress-button bg-primary text-white">Select Date & Time</button>
+                        </div>
+                        <div><hr class="progress-bar-hr"></div>
+                        <div>
+                            <button class="progress-button">Confirm</button>
+                        </div>
                     </div>
-                    <div>
-                        <a href="./login-select-exam.html"><button class="primary-button">Schedule Appointment</button></a>
+                     <!-- ================================|| Progress Bar Ends ||=====================-->
+        
+                      <!-- ================================|| Form Section Starts ||=====================-->
+                    <div class="basic-details-form-group bg-white mt-64">
+                        <span>Loading...</span>
                     </div>
-                    <div><span class="display-2 text-primary">Click above to schedule an appointment</span></div>
+                    <a href="./login-confirm.html"><button class="primary-button mt-16">Next</button></a>
+                     <!-- ================================|| Form Section Ends||=====================-->
                 </div>
             </div>
         </div>
