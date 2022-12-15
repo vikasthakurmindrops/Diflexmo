@@ -1,0 +1,539 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #F5F5F5;
+}
+
+/* ===============================||Global Declaration||======================================*/
+:root {
+    --primary: #531422;
+    --secondary: #F4E3CF;
+    --warning: #B54708;
+    --white: #FFFFFF;
+    --black: #000000;
+    --gray: #4B5565;
+    --lite-pink: #FEE4E2;
+    --border-radius: 8px;
+    --card-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    --transition: .2s all ease;
+
+}
+
+.primary-button {
+    background-color: var(--primary);
+    padding: 10px 15px 10px 15px;
+    border-radius: var(--border-radius);
+    border: none;
+    color: var(--white);
+    font-weight: 400;
+    cursor: pointer;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    transition: var(--transition);
+}
+
+.primary-button:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.secondary-button:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.white-button:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.secondary-button {
+    background-color: var(--secondary);
+    padding: 10px 15px 10px 15px;
+    border-radius: var(--border-radius);
+    border: none;
+    color: var(--primary);
+    font-weight: 400;
+    cursor: pointer;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    transition: var(--transition);
+}
+
+.white-button {
+    background-color: var(--white);
+    padding: 5px;
+    border-radius: var(--border-radius);
+    color: var(--primary);
+    cursor: pointer;
+    border: none;
+    transition: var(--transition);
+}
+
+.white-button:hover {
+    background-color: var(--lite-pink);
+}
+
+.bg-primary {
+    background-color: var(--primary);
+}
+
+.bg-secondary {
+    background-color: var(--secondary);
+}
+
+.bg-white {
+    background-color: var(--white);
+}
+.bg-gray{
+    background-color: var(--gray);
+}
+
+.display-1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 60px;
+    letter-spacing: -0.02em;
+}
+
+.display-2 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 38px;
+
+}
+
+.display-3 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.display-4 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.display-5 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.text-bold {
+    font-weight: 500;
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+.text-secondary {
+    color: var(--secondary);
+}
+
+.text-black {
+    color: var(--black);
+}
+
+.text-gray {
+    color: var(--gray);
+}
+
+.text-white {
+    color: white;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mt-12 {
+    margin-top: 12px;
+}
+
+.mt-16 {
+    margin-top: 16px;
+}
+
+.mt-32 {
+    margin-top: 32px;
+}
+.mt-64{
+    margin-top: 64px;
+}
+.float-left{
+    text-align: start;
+}
+.float-right{
+    text-align: end;
+}
+
+.d-flex {
+    display: flex;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.container-fluid {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+.small-container{
+    width: 80%;
+    margin: auto;
+}
+
+/* ====================================||Global declaration ends||============================= */
+/* ====================================||index Navbar Start||======================================== */
+.navbar {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+.navbar .menu a{
+    text-decoration: none;
+    color: var(--primary);
+}
+
+/* ====================================||index Navbar Ends||======================================== */
+/* ====================================||Hero Section Starts||================================ */
+.hero-section {
+    margin-top: 40px;
+    /* height: 100vh; */
+    padding: 0;
+}
+
+.hero-section .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.welcome-section {
+    width: 50%;
+}
+
+.img-section {
+    width: 50%;
+}
+
+.weekly-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.weekly-content-left,
+.weekly-content-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.weekly-content-right {
+    box-shadow: var(--card-box-shadow);
+    padding: 30px;
+    border-radius: var(--border-radius);
+}
+
+.weekly-content-left .left-content-img {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin-top: 30px;
+}
+
+.weekly-container .weekly-content-right .timing {
+    display: flex;
+    gap: 150px;
+    flex-direction: row;
+}
+
+/* ==========================================||index Footer section Starts||================================ */
+footer .footer-content {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    align-items: center;
+    padding: 20px;
+}
+
+footer .footer-bottom .footer-bottom-text {
+    text-align: end;
+}
+
+footer .footer-content .footer-content-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ===========================================index Footer Section Ends================================== */
+
+
+/* ==========================================Sign In Page Starts========================================= */
+.sign-in-container {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    margin-bottom: 100px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-box-shadow);
+}
+
+.sign-in-left-container,
+.sign-in-right-container {
+    width: 50%;
+}
+/* =============================||Sign in Left Container starts here||====================== */
+.sign-in-left-container {
+    border-right: 1px solid #CDD5DF;
+}
+
+.sign-in-left-container .left-container-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* =============================||Sign in Left Container Ends here||====================== */
+
+/* =============================||Sign in Right Container starts here||====================== */
+
+.sign-in-right-container .sign-in-text-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-in-right-container a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.sign-in-right-container .sign-in-form-group form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign-in-right-container .or-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sign-in-right-container form .form-input {
+    display: flex;
+    border: 1px solid var(--gray);
+    border-radius: var(--border-radius);
+    padding: 5px 15px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.sign-in-right-container form .form-input-text img {
+    margin: 0;
+    padding: 0;
+    margin-top: 5px;
+}
+
+.sign-in-right-container form input[type=text], input[type=password], input[type=tel] {
+    border: none;
+    margin-left: 3px;
+    padding: 5px;
+    font-weight: 500;
+}
+.sign-in-right-container form input[type=text], input[type=password], input[type=tel]:focus{
+    outline: none;
+}
+/* =============================||Sign in Right Container Ends here||====================== */
+footer .footer-text{
+    display: flex;
+    justify-content: end;
+    padding: 10px;
+}
+/* ==========================================Sign In page Ends=================================== */
+
+/* ========================================||Login-Schedule Page Starts||==================================== */
+
+.small-container .header-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.small-container .header-container .container-left, .container-right{
+    width:50%;
+}
+.container-right .container-right-img{
+    display: flex;
+    justify-content: center;
+}
+.dashboard-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 100px;
+}
+.dashboard-container .sidebar-menu{
+    width: 20%;
+    max-height: 250px;
+    border: 1px solid black;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-box-shadow);
+}
+.dashboard-container .sidebar-menu .sidebar-menu-items{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.dashboard-container .sidebar-menu .menu-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 10px;
+    /* align-items: center; */
+    color: var(--secondary);
+    padding: 10px;
+}
+.dashboard-container .sidebar-menu .menu-item:hover{
+    /* background-color: var(--secondary); */
+    border-radius: var(--border-radius);
+    color: var(--primary);
+    cursor: pointer;
+    border: 1px solid var(--secondary);
+}
+/* .dashboard-container .sidebar-menu .menu-item:hover .menu-item img{
+    background-color: var(--primary);
+} */
+.dashboard-container .sidebar-menu .menu-item img{
+    min-width: 10px;
+    width: 15px;
+}
+.dashboard-container .login-dashboard-content{
+    width: 80%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-box-shadow);
+}
+.dashboard-container .login-dashboard-content .dashboard-main-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.active-menu{
+    background-color: var(--secondary);
+    border-radius: var(--border-radius);
+    color: var(--primary)!important;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+}/* ========================================||Login-Schedule Page Ends||==================================== */
+/* ===========================================||Schedule Page Starts||========================= */
+.dashboard-container .dashboard-main-content{
+    width: 100%;
+}
+.schedule-appointment-main-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-box-shadow);
+    gap: 15px;
+    padding: 20px;
+}
+.schedule-appointment-main-content a{
+    text-decoration: underline;
+    color: var(--primary);
+}
+/* ===========================================||Schedule Page Ends||========================= */
+
+/* ===========================================||Basic Details Page Starts||========================= */
+.basic-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.basic-details .basic-details-form-group{
+    box-shadow: var(--card-box-shadow);
+    border-radius: var(--border-radius);
+    padding: 20px 10px;
+}
+.basic-details .basic-details-form-group .form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.basic-details .basic-details-form-group .form-align{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    align-items: center;
+}
+.basic-details .basic-details-form-group form input[type=text], input[type=password], input[type=tel], input[type=email] {
+    border: none;
+    margin-left: 3px;
+    padding: 5px;
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    /* border: 1px solid var(--gray); */
+}
