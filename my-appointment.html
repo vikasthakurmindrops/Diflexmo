@@ -44,36 +44,101 @@
         </div>
     </div>
     <!-- ==========================||Navbar with Banner text and Images Ends Here||===================== -->
-
+    <!-- =================================|| Dashboard Sidebar Menu Starts || ===========================-->
     <div class="container">
         <div class="dashboard-container mt-16">
             <div class="sidebar-menu bg-primary">
                 <div class="sidebar-menu-items">
+                    <a href="./login-schedule.html">
+                        <div class="menu-item " data-color="icon-color">
+                            <img src="./img/home-icon.svg" alt="home-icon">
+                            <span class="display-5 text-secondary hoverable-menu">Dashboard</span>
+                        </div>
+                    </a>
+                    <a href="./my-appointment.html">
                     <div class="menu-item">
-                        <img src="./img/home_icon.svg" alt="home-icon">
-                        <span class="display-5 text-secondary">Dashboard</span>
+                        <img src="./img/calendar_icon.svg" alt="calendar-icon">
+                        <span class="display-5 text-secondary active-menu hoverable-menu">My appointments</span>
                     </div>
-                    <div class="menu-item active-menu">
-                        <img src="./img/calendar_icon.svg" alt="home-icon">
-                        <span class="display-5 text-secondary">My appointments</span>
-                    </div>
+                </a>
+                <a href="./my-profile.html">
                     <div class="menu-item">
-                        <img src="./img/user_icon.svg" alt="home-icon">
-                        <span class="display-5 text-secondary">Profile</span>
+                        <img src="./img/user_icon.svg" alt="user-icon">
+                        <span class="display-5 text-secondary hoverable-menu">Profile</span>
                     </div>
+                </a>
                     <div class="menu-item">
-                        <img src="./img/logout_icon.svg" alt="home-icon">
-                        <span class="display-5 text-secondary">Logout</span>
+                        <img src="./img/logout_icon.svg" alt="logout-icon">
+                        <span class="display-5 text-secondary hoverable-menu">Logout</span>
                     </div>
                 </div>
             </div>
+            <!-- =================================|| Dashboard Sidebar Menu Ends || ===========================-->
+            <!-- =================================|| Upcoming Appointments Section Starts || ===========================-->
             <div class="login-dashboard-content">
-               
+                <div class="upcoming-appointments-section">
+                        <span class="display-3"><b>Upcoming Appointments</b></span>
+                        <div class="upcoming-appointments-details mt-10">
+                            <div class="display-5 upcoming-appointments-date-time">
+                                <img src="./img/clock-icon.svg" alt="clock-icon" width="18px"><span>12 November,
+                                    2022</span>
+                                <img src="./img/checked-calendar-icon.svg" alt="calendar-icon" width="18px"> <span>12:30
+                                    P.M</span>
+                            </div>
+                                <span class="display-4">Exam: Levering stuenzolen <span class="text-gray">|</span> Confirmation Status: Pending</span>
+                            <div>
+                                <span class="display-4"><b>Have an empty stomach 10 hours prior to the test</b></span>
+                            </div>
+                            <div class="upcoming-appointments-btn">
+                                <a href="./login-cancel-appointment.html" class="secondary-button">Cancel</a>
+                                <a href="./login-select-date-time.html" class="primary-button">Edit appointment</a>
+                            </div>
+                        </div>
+                        <span class="mt-32">
+                            <hr class="bg-lite-gray" style="width:600px; height: 4px; border:none; min-width: 50px;">
+                        </span>
+                </div>
             </div>
+            <!-- =================================|| Upcoming Appointments Section Ends || ===========================-->
+        </div>
+    </div>
+    <!-- ===============================||Previous Appointments Section Starts||====================================== -->
+    <div class="small-container">
+        <div class="previous-appointment-title">
+            <span class="display-4"><b>Previous Appointments</b></span>
+            <a href="#" class="white-button text-primary display-5 view-all-btn"> View all</a>
+        </div>
+        <div class="previous-appointment-cards mt-32">
+                <div class="card-item">
+                    <div class="display-5 previous-appointments-date-time">
+                        <img src="./img/clock-icon.svg" alt="clock-icon" width="18px"><span>12 November,2022</span>
+                        <img src="./img/checked-calendar-icon.svg" alt="calendar-icon" width="18px"> <span>12:30 P.M</span>
+                    </div>
+                    <span class="display-5">Exam: Levering Stuenzolean</span>
+                    <span class="display-5">Status: <span class="text-success">Completed</span></span>
+            </div>
+                <div class="card-item">
+                    <div class="display-5 previous-appointments-date-time">
+                        <img src="./img/clock-icon.svg" alt="clock-icon" width="18px"><span>12 November,2022</span>
+                        <img src="./img/checked-calendar-icon.svg" alt="calendar-icon" width="18px"> <span>12:30 P.M</span>
+                    </div>
+                    <span class="display-5">Exam: Levering Stuenzolean</span>
+                    <span class="display-5">Status: <span class="text-success">Completed</span></span>
+            </div>
+                <div class="card-item">
+                    <div class="display-5 previous-appointments-date-time">
+                        <img src="./img/clock-icon.svg" alt="clock-icon" width="18px"><span>12 November,2022</span>
+                        <img src="./img/checked-calendar-icon.svg" alt="calendar-icon" width="18px"> <span>12:30 P.M</span>
+                    </div>
+                    <span class="display-5">Exam: Levering Stuenzolean</span>
+                    <span class="display-5">Status: <span class="text-success">Completed</span></span>
+            </div>
+            
         </div>
     </div>
     <footer>
-        <div class="footer-text">
+        <div class="footer-text mt-32">
+            <a href="#"><span class="text-primary display-5 text-primary">Privacy and cookies policy</span></a>
             <span class="text-primary display-4">Powered by Diflexmo Scheduling System</span>
         </div>
     </footer>

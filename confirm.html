@@ -22,11 +22,19 @@
                 </a>
                 <div class="menu">
                     <div class="text-primary display-4"><a href="./index.html">Home</a></div>
-                    <div>
+                    <div class="register-menu">
                         <a href="#"><button class="secondary-button"><img src="./img/add-user.svg" width="16.67px"
                                     height="15px">
                                 Register</button></a>
+                        <div class="sub-menu">
+                            <div class="nav-menu-items">
+                                <a href="./register.html"><span class="primary-button text-warning">Register</span></a>
+                                <span class="display-5">Existing user? <a href="./signin.html"><span
+                                            class="text-primary white-button">Login</span></a></span>
+                            </div>
+                        </div>
                     </div>
+
                     <div><span class="text-gray text-bold">NL|</span> <span class="text-primary text-bold">EN</span>
                     </div>
                 </div>
@@ -84,16 +92,24 @@
                 <span class="text-primary">Patient Details</span>
                 <hr class="bg-lite-gray">
                 <div class="patient-details-text-section">
-                    <div><span>Name</span></div>
-                    <div><span>Johan Green</span></div>
-                </div>
-                <div class="patient-details-text-section">
-                    <div><span>Email</span></div>
-                    <div><span>Johangreen@gmail.com</span></div>
-                </div>
-                <div class="patient-details-text-section">
-                    <div><span>Phone no.:</span></div>
-                    <div><span>22 45 79 09 45</span></div>
+                    <table class="patient-details-table">
+                        <tr>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>Name -</td>
+                            <td>Johan Green</td>
+                        </tr>
+                        <tr>
+                            <td>Email -</td>
+                            <td>johangreen@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>Phone No -</td>
+                            <td>22 45 79 09 45</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
             <div class="appointment-details display-4">
@@ -107,25 +123,28 @@
                     <span>6:00 P.M - 6:30 P.M</span>
                 </div>
                 <div class="display-5 appointment-instruction">
-                    <span>Instructions:</span>
-                    <span>Have an empty stomach 10 hours prior to the test (Levering stuenzolen)<br> Do not consume alcohal 24 hours prior to the test(Maatname)</span>
+                    <span>Instructions-</span>
+                    <span>Have an empty stomach 10 hours prior to the test (Levering stuenzolen)<br> Do not consume
+                        alcohal 24 hours prior to the test(Maatname)</span>
                 </div>
             </div>
         </div>
         <div class="declaration mt-32">
             <div class="display-5">
-            <input type="checkbox"> I have an application from my referring GP, doctor specialist or dentist.*
+                <input type="checkbox"> I have an application from my referring GP, doctor specialist or dentist.*
             </div>
             <div class="declaration-buttons mt-32">
                 <a href="./select-date-time.html"><button class="secondary-button">Back</button></a>
-                <a href="./lab-confirmation.html"><button type="button"  class="primary-button">Confirm</button></a>
+                <a href="./lab-confirmation.html"><button type="button" class="primary-button">Confirm</button></a>
             </div>
         </div>
-        <footer>
-            <div class="footer-text mt-64">
-                <span class="text-primary display-4">Powered by Diflexmo Scheduling System</span>
-            </div>
-        </footer>
+</div>
+<footer>
+    <div class="footer-text mt-32">
+        <a href="#"><span class="text-primary display-5 text-primary">Privacy and cookies policy</span></a>
+        <span class="text-primary display-4">Powered by Diflexmo Scheduling System</span>
+    </div>
+</footer>
 </body>
 
 </html>

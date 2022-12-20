@@ -49,32 +49,38 @@
         <div class="dashboard-container mt-16">
             <div class="sidebar-menu bg-primary">
                 <div class="sidebar-menu-items">
-                    <div class="menu-item active-menu">
-                        <img src="./img/home_icon.svg" alt="home-icon">
-                        <span class="display-5 text-secondary">Dashboard</span>
-                    </div>
+                    <a href="./login-schedule.html">
+                        <div class="menu-item " data-color="icon-color">
+                            <img src="./img/home-icon.svg" alt="home-icon">
+                            <span class="display-5 text-secondary active-menu hoverable-menu">Dashboard</span>
+                        </div>
+                    </a>
+                    <a href="./my-appointment.html">
                     <div class="menu-item">
-                        <img src="./img/calendar_icon.svg" alt="home-icon">
-                        <span class="display-5 text-secondary">My appointments</span>
+                        <img src="./img/calendar_icon.svg" alt="calendar-icon">
+                        <span class="display-5 text-secondary hoverable-menu">My appointments</span>
                     </div>
+                </a>
+                <a href="./my-profile.html">
                     <div class="menu-item">
-                        <img src="./img/user_icon.svg" alt="home-icon">
-                        <span class="display-5 text-secondary">Profile</span>
+                        <img src="./img/user_icon.svg" alt="user-icon">
+                        <span class="display-5 text-secondary hoverable-menu">Profile</span>
                     </div>
+                </a>
                     <div class="menu-item">
-                        <img src="./img/logout_icon.svg" alt="home-icon">
-                        <span class="display-5 text-secondary">Logout</span>
+                        <img src="./img/logout_icon.svg" alt="logout-icon">
+                        <span class="display-5 text-secondary hoverable-menu">Logout</span>
                     </div>
                 </div>
             </div>
             <div class="login-dashboard-content">
-                <div class="basic-details mt-32">
+                <div class="basic-details">
                     <!-- ================================|| Progress Bar Starts ||=====================-->
                     <div class="basic-details-progress-bar">
                         <div>
                             <button class="progress-button bg-success text-white">Select Exam</button>
                         </div>
-                        <div><hr class="progress-bar-hr"></div>
+                        <div><hr class="progress-bar-hr bg-success"></div>
                         <div>
                             <button class="progress-button bg-success text-white">Select Date & Time</button>
                         </div>
@@ -86,22 +92,29 @@
                      <!-- ================================|| Progress Bar Ends ||=====================-->
         
                       <!-- ================================|| Form Section Starts ||=====================-->
-                    <div class="basic-details-form-group bg-white mt-64">
-                        <div class="confirm-details mt-64">
+                        <div class="confirm-details mt-16"> 
                             <div class="patient-details display-4 ">
                                 <span class="text-primary">Patient Details</span>
                                 <hr class="bg-lite-gray">
                                 <div class="patient-details-text-section">
-                                    <div><span>Name</span></div>
-                                    <div><span>Johan Green</span></div>
-                                </div>
-                                <div class="patient-details-text-section">
-                                    <div><span>Email</span></div>
-                                    <div><span>Johangreen@gmail.com</span></div>
-                                </div>
-                                <div class="patient-details-text-section">
-                                    <div><span>Phone no.:</span></div>
-                                    <div><span>22 45 79 09 45</span></div>
+                                    <table class="patient-details-table">
+                                        <tr>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                        <tr>
+                                            <td>Name -</td>
+                                            <td>Johan Green</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Email -</td>
+                                            <td>johangreen@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Phone No -</td>
+                                            <td>22 45 79 09 45</td>
+                                        </tr>
+                                    </table>
                                 </div>
                             </div>
                             <div class="appointment-details display-4">
@@ -115,28 +128,31 @@
                                     <span>6:00 P.M - 6:30 P.M</span>
                                 </div>
                                 <div class="display-5 appointment-instruction">
-                                    <span>Instructions:</span>
+                                    <span>Instructions-</span>
                                     <span>Have an empty stomach 10 hours prior to the test (Levering stuenzolen)<br> Do not consume alcohal 24 hours prior to the test(Maatname)</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="declaration mt-32">
-                            <div class="display-5">
-                            <input type="checkbox"> I have an application from my referring GP, doctor specialist or dentist.*
+                        <div class="declaration mt-16">
+                            <div class="display-5 checkbox-section">
+                                <input type="checkbox" role="checked"id="referring-doc-accept">
+                                <label for="referring-doc-accept"> I have an application from my referring GP, doctor specialist or dentist.*</label><br>
+                                <input type="checkbox" id="personal-info-accept">
+                                <label for="personal-info-accept"> I hereby give consent to store my personal information</label>
                             </div>
-                            <div class="declaration-buttons mt-32">
+                            <div class="declaration-buttons mt-16">
                                 <a href="./select-date-time.html"><button class="secondary-button">Back</button></a>
                                 <a href="./login-lab-confirmation.html"><button type="button"  class="primary-button">Confirm</button></a>
                             </div>
                         </div>
-                    </div>
                      <!-- ================================|| Form Section Ends||=====================-->
                 </div>
             </div>
         </div>
     </div>
     <footer>
-        <div class="footer-text">
+        <div class="footer-text mt-32">
+            <a href="#"><span class="text-primary display-5 text-primary">Privacy and cookies policy</span></a>
             <span class="text-primary display-4">Powered by Diflexmo Scheduling System</span>
         </div>
     </footer>

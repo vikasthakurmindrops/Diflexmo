@@ -19,24 +19,25 @@ body {
     --white: #FFFFFF;
     --black: #000000;
     --gray: #4B5565;
-    --lite-gray:#E3E8EF;
-    --lite-pink: #FEE4E2;
-    --pink:#E30613;
+    --lite-gray: #E3E8EF;
+    --lite-pink: #FEF3F2;
+    --pink: #E30613;
     --border-radius: 8px;
     --card-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     --transition: .2s all ease;
     --success: #039855;
-    --warning:#FDB022;
+    --warning: #FDB022;
+    --body-color: #F5F5F5;
 
 }
 
 .primary-button {
     background-color: var(--primary);
-    padding: 10px 15px 10px 15px;
+    padding: 9px 15px 9px 15px;
     border-radius: var(--border-radius);
     border: none;
-    color: var(--white);
-    font-weight: 400;
+    color: var(--secondary);
+    font-weight: 500;
     cursor: pointer;
     font-family: 'Montserrat';
     font-style: normal;
@@ -44,29 +45,13 @@ body {
     line-height: 24px;
     transition: var(--transition);
 }
-
-.primary-button:hover {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
-}
-
-.secondary-button:hover {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
-}
-
-.white-button:hover {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
-}
-
 .secondary-button {
     background-color: var(--secondary);
-    padding: 10px 15px 10px 15px;
+    padding: 9px 15px 9px 15px;
     border-radius: var(--border-radius);
     border: none;
     color: var(--primary);
-    font-weight: 400;
+    font-weight: 500;
     cursor: pointer;
     font-family: 'Montserrat';
     font-style: normal;
@@ -74,13 +59,14 @@ body {
     line-height: 24px;
     transition: var(--transition);
 }
+
 .gray-button {
     background-color: var(--gray);
-    padding: 10px 15px 10px 15px;
+    padding: 9px 15px 9px 15px;
     border-radius: var(--border-radius);
     border: none;
     color: var(--white);
-    font-weight: 400;
+    font-weight: 500;
     /* cursor: pointer; */
     font-family: 'Montserrat';
     font-style: normal;
@@ -90,7 +76,18 @@ body {
 }
 
 .white-button {
-    background-color: var(--white);
+    background-color: transparent;
+    padding: 5px;
+    border-radius: var(--border-radius);
+    color: var(--primary);
+    cursor: pointer;
+    border: none;
+    transition: var(--transition);
+    text-decoration: underline;
+}
+
+.body-color-button {
+    background-color: transparent;
     padding: 5px;
     border-radius: var(--border-radius);
     color: var(--primary);
@@ -101,16 +98,33 @@ body {
 
 .progress-button {
     background-color: var(--white);
-    padding: 10px 15px 10px 15px;
+    padding: 9px 15px 9px 15px;
     border-radius: var(--border-radius);
     color: var(--primary);
     border: none;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
     line-height: 24px;
 }
+.primary-button:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: var(--white);
+
+}
+
+.secondary-button:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: var(--black);
+}
 
 .white-button:hover {
+    background-color: var(--lite-pink);
+    text-decoration: none;
+}
+
+
+
+.body-color-button:hover {
     background-color: var(--lite-pink);
 }
 
@@ -129,22 +143,31 @@ body {
 .bg-gray {
     background-color: var(--gray);
 }
-.bg-lite-gray{
+
+.bg-lite-gray {
     background-color: var(--lite-gray);
 }
 
 .bg-success {
     background-color: var(--success);
 }
-.bg-warning{
+
+.bg-warning {
     background-color: var(--warning);
 }
-.bg-pink{
+
+.bg-pink {
     background-color: var(--pink);
 }
-.no-box-shadow{
+
+.no-box-shadow {
     box-shadow: none;
 }
+
+.no-border {
+    border: none;
+}
+
 .display-1 {
     font-family: 'Montserrat';
     font-style: normal;
@@ -203,6 +226,10 @@ body {
     color: var(--secondary);
 }
 
+.text-success {
+    color: var(--success);
+}
+
 .text-black {
     color: var(--black);
 }
@@ -213,6 +240,14 @@ body {
 
 .text-white {
     color: white;
+}
+
+.text-lite-gray {
+    color: var(--lite-gray)
+}
+
+.mt-5 {
+    margin-top: 5px;
 }
 
 .mt-10 {
@@ -246,10 +281,34 @@ body {
 .d-flex {
     display: flex;
 }
-
 .flex-column {
     display: flex;
     flex-direction: column;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+.gap-10{
+    gap:10px;
+}
+.gap-20{
+    gap:20px;
+}
+.gap-30{
+    gap:30px;
+}
+.gap-40{
+    gap:40px;
+}
+.gap-80{
+    gap: 80px;
+}
+.justify-center{
+    justify-content: center;
+}
+.justify-end{
+    justify-content: end;
 }
 
 .container-fluid {
@@ -278,11 +337,39 @@ body {
     height: 50px;
 }
 
-.menu {
+.menu{
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 15px;
+}
+.register-menu{
+    position: relative;
+}
+.sub-menu{
+    position: absolute;
+    background-color: var(--lite-pink);
+    top: 45px;
+    left: 0;
+    right: 10;
+    right:100px;
+    border-radius: var(--border-radius);
+    display: none;
+    padding: 10px;
+    width: 130px;
+    text-align: center;
+}
+.menu .sub-menu .nav-menu-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    margin-top: 5px;
+    
+}
+.menu .register-menu:hover .sub-menu{
+ display:block;
 }
 
 .navbar .menu a {
@@ -319,16 +406,42 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 16px;
 }
 
-.weekly-content-left,
-.weekly-content-right {
+.Opening-text {
+    margin-bottom: 16px;
+}
+
+.weekly-content-left {
     width: 50%;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    text-align: center;
 }
+
+.weekly-content-right {
+    width: 50%;
+
+}
+
+/* =====================================table section starts============================ */
+
+table.weekly-content-right-table, table.patient-details-table{
+    width: 100%;
+    border-collapse: collapse;
+    color: #000000;
+    font-weight: 500;
+}
+
+table.weekly-content-right-table td,
+table.weekly-content-right-table th {
+    padding: 3px;
+}
+
+/* =====================================table section Ends============================ */
+
+
 
 .weekly-content-right {
     box-shadow: var(--card-box-shadow);
@@ -338,15 +451,9 @@ body {
 
 .weekly-content-left .left-content-img {
     display: flex;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
     margin-top: 30px;
-}
-
-.weekly-container .weekly-content-right .timing {
-    display: flex;
-    gap: 150px;
-    flex-direction: row;
 }
 
 /* ==========================================||index Footer section Starts||================================ */
@@ -358,17 +465,29 @@ footer .footer-content {
     padding: 20px;
 }
 
-footer .footer-bottom .footer-bottom-text {
-    text-align: end;
-}
-
 footer .footer-content .footer-content-items {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
 
+/* ================================||Footer Bottom Starts||=============================== */
+.footer-bottom .footer-bottom-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.footer-bottom a {
+    text-decoration: underline;
+    color: var(--primary);
+}
+
+/* ================================||Footer Bottom Ends||=============================== */
 /* ===========================================index Footer Section Ends================================== */
 
 
@@ -379,7 +498,7 @@ footer .footer-content .footer-content-items {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
-    padding: 50px;
+    padding: 25px 30px;
     margin-bottom: 100px;
     border-radius: var(--border-radius);
     box-shadow: var(--card-box-shadow);
@@ -413,8 +532,8 @@ footer .footer-content .footer-content-items {
 }
 
 .sign-in-right-container a {
-    text-decoration: none;
     color: var(--primary);
+    text-decoration: none;
 }
 
 .sign-in-right-container .sign-in-form-group form {
@@ -424,13 +543,13 @@ footer .footer-content .footer-content-items {
     justify-content: center;
 }
 
-.sign-in-right-container .or-section {
+.sign-in-right-container .sign-in-form-group .input-group
+
+/*input field section*/
+    {
     display: flex;
-    justify-content:center;
-    align-items: center;
-    align-items: center;
-    flex-direction: row;
-    gap: 3px;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .sign-in-right-container form .form-input {
@@ -440,35 +559,57 @@ footer .footer-content .footer-content-items {
     padding: 5px 15px;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
+    /* flex-direction: row; */
 }
 
-.sign-in-right-container form .form-input-text img {
+.sign-in-right-container form .form-input img {
     margin: 0;
     padding: 0;
     margin-top: 5px;
 }
 
-.sign-in-right-container form input[type=text],
+.sign-in-right-container .sign-in-form-group input[type=text],
 input[type=password],
 input[type=tel] {
     border: none;
     margin-left: 3px;
     padding: 5px;
-    font-weight: 500;
+    font-weight: 600;
+    margin-left: -40px;
+    text-align: left;
+}
+
+.sign-in-right-container .sign-in-form-group input[type=email] {
+    border: none;
+    font-weight: 600;
 }
 
 .sign-in-right-container form input[type=text],
 input[type=password],
+input[type=email],
 input[type=tel]:focus {
     outline: none;
+}
+
+
+.sign-in-right-container .or-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 3px;
 }
 
 /* =============================||Sign in Right Container Ends here||====================== */
 footer .footer-text {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     padding: 10px;
+    align-items: center;
+}
+footer .footer-text a{
+    color: var(--primary);
 }
 
 /* ==========================================Sign In page Ends=================================== */
@@ -498,13 +639,12 @@ footer .footer-text {
     flex-direction: row;
     justify-content: space-between;
     gap: 50px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .dashboard-container .sidebar-menu {
     width: 20%;
-    max-height: 250px;
-    border: 1px solid black;
+    max-height: 240px;
     border-radius: var(--border-radius);
     box-shadow: var(--card-box-shadow);
 }
@@ -516,27 +656,47 @@ footer .footer-text {
     gap: 10px;
 }
 
+.dashboard-container .sidebar-menu .sidebar-menu-items a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
 .dashboard-container .sidebar-menu .menu-item {
     display: flex;
     flex-direction: row;
     justify-content: start;
     gap: 10px;
-    /* align-items: center; */
     color: var(--secondary);
     padding: 10px;
 }
 
-.dashboard-container .sidebar-menu .menu-item:hover {
-    /* background-color: var(--secondary); */
+.active-menu {
+    background-color: var(--secondary);
     border-radius: var(--border-radius);
-    color: var(--primary);
     cursor: pointer;
-    border: 1px solid var(--secondary);
+    padding: 5px;
+    border: none;
+    color: var(--primary);
+    width: 100%;
+    text-align: left;
+    font-weight: 600;
+}
+.dashboard-container .sidebar-menu .menu-item:hover .hoverable-menu{
+    background-color: var(--secondary);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    padding: 5px;
+    border: none;
+    color: var(--primary);
+    transition:var(--transition);
+    transform: translateX(10px);
+
+}
+.dashboard-container .sidebar-menu .menu-item:hover img{
+    transform: translateX(10px);
+    width: 18px;
 }
 
-/* .dashboard-container .sidebar-menu .menu-item:hover .menu-item img{
-    background-color: var(--primary);
-} */
 .dashboard-container .sidebar-menu .menu-item img {
     min-width: 10px;
     width: 15px;
@@ -545,6 +705,9 @@ footer .footer-text {
 .dashboard-container .login-dashboard-content {
     width: 80%;
     border-radius: var(--border-radius);
+}
+
+.dashboard-container .login-dashboard-content[data-title="login-dashboard-content"] {
     box-shadow: var(--card-box-shadow);
 }
 
@@ -557,14 +720,6 @@ footer .footer-text {
     margin-bottom: 20px;
 }
 
-.active-menu {
-    background-color: var(--secondary);
-    border-radius: var(--border-radius);
-    color: var(--primary) !important;
-    cursor: pointer;
-    padding: 10px;
-    border: none;
-}
 
 /* ========================================||Login-Schedule Page Ends||==================================== */
 /* ===========================================||Schedule Page Starts||========================= */
@@ -584,8 +739,7 @@ footer .footer-text {
 }
 
 .schedule-appointment-main-content a {
-    text-decoration: underline;
-    color: var(--primary);
+    text-decoration: none;
 }
 
 /* ===========================================||Schedule Page Ends||========================= */
@@ -613,7 +767,7 @@ footer .footer-text {
 .basic-details .basic-details-form-group {
     box-shadow: var(--card-box-shadow);
     border-radius: var(--border-radius);
-    padding: 50px 20px;
+    padding: 50px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -622,33 +776,37 @@ footer .footer-text {
 .basic-details .basic-details-form-group .form-group {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 15px;
 }
 
-.basic-details .basic-details-form-group .form-align {
+.form-align {
     display: flex;
     flex-direction: row;
-    gap: 25px;
+    gap: 20px;
     align-items: center;
 }
 
-.basic-details form input[type=text],
-input[type=password],
-input[type=tel],
-input[type=email] {
-    border: none;
+.basic-details-form-group .form-group input[data-name="physician-name"],
+input[type=text],
+input[type=email],
+input[data-type=telephone] {
     margin-left: 3px;
     padding: 10px;
     font-weight: 500;
     border-radius: var(--border-radius);
-    border: 1px solid var(--secondary);
+    border: 1px solid var(--gray);
 }
 
-.basic-details form input[type=text],
-input[type=password],
-input[type=tel],
-input[type=email]:focus {
+.basic-details-form-group .form-group input[data-name="physician-name"],
+input[type=text],
+input[data-type=telephone]:focus {
     outline: none;
+}
+.form-group .referring-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:flex-start;
 }
 
 /* ===========================================||Basic Details Page Ends||========================= */
@@ -671,80 +829,302 @@ textarea:focus {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
+    gap: 8px;
 }
 
 /* ===========================================||Select Exam Ends||========================= */
 /* ===========================================||Confirm Page Starts||========================= */
-.confirm-details{
+.confirm-details {
     width: 100%;
     display: flex;
     flex-direction: row;
     gap: 50px;
-   
+
 }
-.confirm-details hr{
+
+.confirm-details hr {
     height: 2px;
     border: none;
 }
-.confirm-details .patient-details{
-    width: 40%;
+
+.confirm-details .patient-details {
+    width: 50%;
+    max-height: 200px;
     box-shadow: var(--card-box-shadow);
     border-radius: var(--border-radius);
-    padding: 50px 20px;
+    padding: 15px 20px;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
-.confirm-details .appointment-details{
-    width: 60%;
+
+.confirm-details .appointment-details {
+    width: 50%;
     box-shadow: var(--card-box-shadow);
     border-radius: var(--border-radius);
-    padding: 50px 20px;
+    padding: 15px 20px;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
-.confirm-details .patient-details .patient-details-text-section{
-display: flex;
-gap: 100px;
-flex-direction: row;
+
+.confirm-details .patient-details .patient-details-text-section {
+    display: flex;
+    gap: 100px;
+    flex-direction: row;
 }
-.confirm-details .appointment-date-time{
-display: flex;
-flex-direction: row;
-justify-content: start;
-align-items: center;
-gap: 8px;
+
+.confirm-details .appointment-date-time {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 8px;
 }
-.confirm-details .appointment-instruction{
+
+.confirm-details .appointment-instruction {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 20px;
 }
-.declaration{
+
+.declaration {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.declaration .declaration-buttons{
+
+.declaration .checkbox-section input:checked {
+    color: var(--primary);
+}
+
+.declaration .declaration-buttons {
     display: flex;
     flex-direction: row;
     gap: 15px;
 }
+
 /* ===========================================||Confirm Page Ends||========================= */
 /* ===========================================||Lab Confirmation Page Starts||========================= */
-.lab-confirmation-status{
+.lab-confirmation-status {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 15px;
 }
-.lab-confirmation-status .pending-status{
+
+.lab-confirmation-status .pending-status {
     padding: 10px 15px 10px 15px;
     color: var(--white);
     border-radius: var(--border-radius);
 }
+
+/* ===========================================||Lab Confirmation Page Ends||========================= */
+
+/* =================================||My Appointments Page Starts (Dashboard)||======================= */
+.upcoming-appointments-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.upcoming-appointments-section .upcoming-appointments-details {
+    padding: 5px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-box-shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 100px;
+    gap: 20px;
+}
+
+
+.upcoming-appointments-section .upcoming-appointments-details .upcoming-appointments-date-time {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.upcoming-appointments-section .upcoming-appointments-details .upcoming-appointments-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.upcoming-appointments-section .upcoming-appointments-details .upcoming-appointments-btn a {
+    text-decoration: none;
+}
+
+.previous-appointment-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+}
+
+.previous-appointment-title .view-all-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-decoration: underline;
+}
+
+.previous-appointment-title a {
+    text-decoration: none;
+    color: var(--primary)
+}
+
+.previous-appointment-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.previous-appointment-cards .card-item {
+    padding: 20px;
+    box-shadow: var(--card-box-shadow);
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.previous-appointment-cards .card-item .previous-appointments-date-time {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+/* =================================||My Appointments Page Ends (Dashboard)||======================= */
+/* =================================||My Profile Page Starts Here (Dashboard)||======================= */
+.my-profile-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding:0;
+    margin: 0;
+}
+.my-profile-form-group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--card-box-shadow);
+    border-radius: var(--border-radius);
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px 100px;
+    text-align: start;
+
+}
+.my-profile-form-group .input-form-group{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+}
+.my-profile-form-group .input-form-group .form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.save-changes-btn a{
+    text-decoration: none;
+}
+.profile-footer{
+    display: flex;
+    width: 100%;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction:row;
+}.profile-footer .my-profile-footer-blank{
+    width: 20%;
+}
+.profile-footer .my-profile-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width:80%;
+    gap:20px;
+    box-shadow: var(--card-box-shadow);
+    border-radius: var(--border-radius);
+    padding: 20px;
+}
+.profile-footer .my-profile-footer .my-profile-footer-card{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.profile-footer .my-profile-footer .my-profile-footer-card a{
+    text-decoration: none;
+}
+.delete-account{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-left: 20%;
+}
+
+
+/* ==============================||Media Query Starts||==================================== */
+/* ==============================||Media Query Starts for Home Page||==================================== */
+
+@media only screen and (max-width:600px){
+    .navbar .menu{
+        display: none;
+    }
+    .hero-section .container .welcome-section{
+        width: 100%;
+    }
+    .hero-section .container .img-section{
+        display: none;
+    }
+    .weekly-container{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .weekly-container .weekly-content-left{
+        width:100%;
+    }
+    .weekly-container .weekly-content-right{
+        width: 100%;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
+    /* ==============================||Media Query Starts for Schedule.html Page||==================================== */
+    .header-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .header-container .container-left{
+        width: 100%;
+    }
+    .header-container .container-right{
+        display: none;
+    }
+    /* ==============================||Media Query Ends for Schedule.html Page||==================================== */
+}
+/* ==============================||Media Query Ends for Home Page||==================================== */
+
