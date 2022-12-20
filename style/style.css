@@ -752,6 +752,9 @@ footer .footer-text a{
     align-items: center;
     padding: 25px 10px;
 }
+.basic-details .basic-details-text{
+    display: none;
+}
 
 .basic-details-progress-bar {
     display: flex;
@@ -1125,6 +1128,20 @@ textarea:focus {
         display: none;
     }
     /* ==============================||Media Query Ends for Schedule.html Page||==================================== */
+    /* ==============================||Media Query Starts for basic-details.html Page||==================================== */
+
+    .basic-details-progress-bar{
+        display: none;
+    }
+    .basic-details .basic-details-text{
+        display: block;
+    }
+    .basic-details-form-group .form-align{
+        display: flex;
+        flex-direction: column;
+    }
+    /* ==============================||Media Query Ends for basic-details.html Page||==================================== */
 }
 /* ==============================||Media Query Ends for Home Page||==================================== */
+/* ==============================||Media Query Starts||==================================== */
 
